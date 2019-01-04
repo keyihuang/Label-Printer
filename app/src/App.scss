@@ -1,0 +1,221 @@
+.container {
+  padding-right: 4.5vw;
+  padding-left: 4.5vw;
+  padding-top: 4.5vw;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 4vw;
+}
+
+.center td[style], th[style] {
+  text-align: center !important;
+}
+
+.table {
+  margin-bottom: 0vw;
+  td {
+    padding: 1.5vw;
+    text-align: center;
+    line-height: 1.42857143;
+    border-top: 0.1vw solid #ddd;
+  }
+  > {
+    tbody > tr > {
+      td, th {
+        padding: 8px;
+        line-height: 1.42857143;
+        vertical-align: middle;
+        text-align: center;
+        border-top: 1px solid #ddd;
+      }
+    }
+    tfoot > tr > {
+      td, th {
+        padding: 8px;
+        line-height: 1.42857143;
+        vertical-align: middle;
+        text-align: center;
+        border-top: 1px solid #ddd;
+      }
+    }
+    thead > tr > {
+      td, th {
+        padding: 8px;
+        line-height: 1.42857143;
+        vertical-align: middle;
+        text-align: center;
+        border-top: 1px solid #ddd;
+      }
+    }
+  }
+}
+
+.menuText {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top:20%;
+}
+
+.newLine {
+  width: 100%;
+}
+
+.numberCircle {
+  margin: auto;
+  width: 7vw;
+  height: 7vw;
+  line-height: 6.5vw;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 95%;
+  border: 0.5vw solid #666;
+}
+
+// {
+// color: #fff;
+// background-color: #161617;
+// }
+
+.bottom {
+  position: absolute;
+  bottom: 0vw;
+  width: 100vw;
+  height: 15vw;
+  font-size: 2vh;
+  text-align: center;
+  border-top: 0.3vw solid grey;
+}
+
+.list-group-item.active {
+  color: black;
+  background-color: #f1f1f1;
+  /* #27eccbc7; */
+  /* #c9c6c6ba; */
+  &:focus, &:hover {
+    color: black;
+    background-color: #f1f1f1;
+    /* #27eccbc7; */
+    /* #c9c6c6ba; */
+  }
+}
+
+.btn-group {
+  text-align: center;
+  margin: 0 auto;
+  > {
+    .btn {
+      &:not(:first-child):not(:last-child):not(.dropdown-toggle), &:first-child:not(:last-child):not(.dropdown-toggle), &:last-child:not(:first-child) {
+        border-radius: 2vw;
+      }
+    }
+    .dropdown-toggle:not(:first-child) {
+      border-radius: 2vw;
+    }
+  }
+}
+
+.btn-default:hover {
+  color: #333;
+  background-color: white;
+}
+
+.btn-block {
+  height: 15vw;
+  font-size: 120%;
+}
+
+.row {
+  margin: auto;
+  width: 98vw;
+  padding: 5vw;
+  height: 70vh;
+  font-size: 4.5vw;
+}
+
+.col-xs-6 {
+  height: 33vw;
+  text-align: left;
+  border: 0vw;
+  font-size: 4.5vw;
+}
+
+.footerBtn {
+  width: 50vw;
+  height: 15vw;
+  font-size: 120%;
+  /* color: #27eccbc7; */
+}
+
+ul {
+  width: 100vw;
+  display: inline-block;
+}
+
+nav {
+  text-align: center;
+  width: 100vw;
+  height: 15vw;
+  display: inline-block;
+}
+
+.navbar .navbar-nav {
+  float: initial;
+  margin: auto;
+  font-size: 5vw;
+  display: block;
+  border-bottom: 0.3vw solid #676767;
+}
+
+input {
+  color: #333;
+  background-color: inherit;
+  border: 0;
+  width: 30vw;
+  height: 15vw;
+  line-height: normal;
+  &:active, &:focus {
+    color: black;
+    /* #27eccbc7; */
+    /* black */
+    /* text-decoration: underline; */
+    border-bottom: 0.5vw solid black;
+    /* #27eccbc7; */
+    /* #676767; */
+    outline: none;
+  }
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

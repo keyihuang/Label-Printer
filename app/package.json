@@ -1,0 +1,56 @@
+{
+  "name": "label-printer",
+  "version": "0.1.0",
+  "private": true,
+  "main": "server/electron.js",
+  "homepage": "./",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "convert-csv-to-json": "0.0.13",
+    "electron-is-dev": "^0.3.0",
+    "express": "^4.16.2",
+    "html-pdf": "^2.2.0",
+    "node-sass-chokidar": "^1.3.3",
+    "react": "^16.4.2",
+    "react-bootstrap": "^0.32.1",
+    "react-bootstrap-table": "^4.3.1",
+    "react-btn-checkbox": "0.0.2",
+    "react-dom": "^16.4.2",
+    "react-scripts": "1.1.4",
+    "webpack": "^3.12.0"
+  },
+  "productName": "Label Printer",
+  "devDependencies": {
+    "concurrently": "^3.6.1",
+    "electron": "^2.0.7",
+    "electron-builder": "^20.27.1",
+    "electron-packager": "^12.1.0",
+    "wait-on": "^2.1.0"
+  },
+  "proxy": "http://localhost:5000",
+  "scripts": {
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "build-js": "react-scripts build",
+    "build": "concurrently \"npm run build-css\" \"npm run build-js\"",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "server": "node ./server/server.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn react-scripts start\"  \"npm run watch-css\"",
+    "electron-dev": "concurrently --kill-others-on-fail \"npm run watch-css\" \"BROWSER=none npm run server\" \"wait-on http://localhost:5000 && electron .\"",
+    "electron-pack-mac": "build -c.extraMetadata.main=server/electron.js",
+    "electron-pack-linux": "electron-packager . label-printer --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=true --out=release-builds"
+  },
+  "build": {
+    "appId": "label-printer",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*",
+      "server/*"
+    ],
+    "directories": {
+      "buildResources": "public"
+    }
+  },
+  "license": "MIT"
+}
